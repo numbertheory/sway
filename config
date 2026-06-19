@@ -8,7 +8,8 @@ exec kitty
 for_window [app_id="kitty"] fullscreen enable
 exec_always --no-startup-id /home/jp/dev/swaystuff/bg-random.sh
 
-
+exec swayidle -w \
+  before-sleep 'hyprlock --config ~/.config/sway/hyprlock.conf'
 
 ### Variables
 #
