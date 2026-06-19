@@ -10,6 +10,10 @@ MODULES_DIR="$(dirname "$(readlink -f "$0")")/modules"
 . "$MODULES_DIR/sway_get_bluetooth.sh"
 . "$MODULES_DIR/sway_get_date.sh"
 
+exec swayidle -w \
+  before-sleep 'swaylock -f' \
+  timeout 300 'swaylock -f'
+
 
 # ==============================================================================
 # MAIN STATUS BAR LOOP
